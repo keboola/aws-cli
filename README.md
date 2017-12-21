@@ -1,5 +1,7 @@
 # keboola/aws-cli 
 
+[![Build Status](https://travis-ci.org/keboola/aws-cli.svg?branch=master)](https://travis-ci.org/keboola/aws-cli)
+
 Derived from [JeanMertz/docker-aws-cli](https://github.com/JeanMertz/docker-aws-cli), available as `quay.io/keboola/aws-cli`.
 
 ## Build
