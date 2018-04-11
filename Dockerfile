@@ -1,5 +1,4 @@
 FROM gliderlabs/alpine:3.5
-MAINTAINER Ondrej Hlavacek <ondrej.hlavacek@keboola.com>
 
 WORKDIR /root
 VOLUME /root/.aws
@@ -7,5 +6,13 @@ VOLUME /root/.aws
 ENTRYPOINT ["/usr/bin/aws"]
 CMD ["help"]
 
-RUN apk-install py-pip
-RUN pip install awscli
+RUN apk update && apk add \
+      bash \
+      curl \
+      less \
+      groff \
+      jq \
+      python \
+      py-pip \
+      py2-pip && \
+      pip install --upgrade pip awscli
