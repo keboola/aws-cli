@@ -13,5 +13,16 @@ docker build . -t keboola/aws-cli
 ## Usage
 
 ```
-docker run --rm -i -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY keboola/aws-cli:latest ecr get-login --region us-east-1 --no-include-email
+docker run --rm -i \
+-e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+keboola/aws-cli:latest ecr get-login --region us-east-1 --no-include-email
+```
+
+## Mounted Config Folder
+
+```
+docker run --rm -i \
+--volume $HOME/.aws/:/root/.aws/ \
+keboola/aws-cli:latest configure
+
 ```
