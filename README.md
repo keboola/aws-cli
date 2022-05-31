@@ -26,3 +26,7 @@ docker run --rm -i \
 keboola/aws-cli:latest configure
 
 ```
+
+## License
+
+MIT licensed, see [LICENSE](./LICENSE) file.
